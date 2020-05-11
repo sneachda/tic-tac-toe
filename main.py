@@ -5,19 +5,19 @@ board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
 
-# Lets us know if the game is over yet
+# Game on or off
 game_still_going = True
 
-# Tells us who the winner is
+# Whi is the winner?
 winner = None
 
-# Tells us who the current player is (X goes first)
+# Who currently plays (X goes first)
 current_player = "X"
 
 
 # ------------- Functions ---------------
 
-# Play a game of tic tac toe
+# Play game
 def play_game():
     # Show the initial game board
     display_board()
@@ -30,10 +30,10 @@ def play_game():
         # Check if the game is over
         check_if_game_over()
 
-        # Flip to the other player
+        # Flip between players
         flip_player()
 
-    # Since the game is over, print the winner or tie
+    # Game over - print the winner or tie
     if winner == "X" or winner == "O":
         print(winner + " won.")
     elif winner == None:
@@ -49,7 +49,7 @@ def display_board():
     print("\n")
 
 
-# Handle a turn for an arbitrary player
+# Handle a turn for player
 def handle_turn(player):
     # Get position from player
     print(player + "'s turn.")
@@ -196,5 +196,5 @@ def flip_player():
 
 
 # ------------ Start Execution -------------
-# Play a game of tic tac toe
+# Play a game
 play_game()
